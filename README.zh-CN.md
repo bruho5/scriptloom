@@ -5,6 +5,12 @@
 
 一个轻量的浏览器本地剧本工作台：彩色词库、浮动笔记，以及可选的 AI 样稿辅助。先创作，需要时再主动调用 AI。
 
+## Windows 桌面预览版
+
+[desktop/](desktop/README.zh-CN.md) 提供 MyGo 桌面版源码，与原网页版并存。桌面版使用本机文件、Windows 凭据管理器及 OpenAI 直连，详见[桌面版构建与使用说明](desktop/README.zh-CN.md)。
+
+**本仓库尚未发布可下载 EXE 或 GitHub Release。** Download ZIP 下载的是源码，不是已安装的桌面程序。下面的安装流程仍适用于网页版。
+
 ## 安装与使用
 
 **环境要求：**Node.js 22+（[LTS 下载](https://nodejs.org/en/download)）及现代浏览器。Windows 可使用官方 Windows Installer（.msi）安装。
@@ -98,3 +104,4 @@ npm run build
 
 ## 贡献与许可
 [MIT 许可证](LICENSE)，版权署名 bruho5。参见 [贡献说明](CONTRIBUTING.md) 和 [第三方来源](THIRD_PARTY_NOTICES.md)。
+

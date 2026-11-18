@@ -1,0 +1,16 @@
+{
+  "RT_GROUP_ICON": {
+    "APP": {
+      "0000": [
+        "../assets/scriptloom-16.png",
+        "../assets/scriptloom-24.png",
+        "../assets/scriptloom-32.png",
+        "../assets/scriptloom-48.png",
+        "../assets/scriptloom-64.png",
+        "../assets/scriptloom-96.png",
+        "../assets/scriptloom-128.png",
+        "../assets/scriptloom-256.png"
+      ]
+    }
+  }
+}

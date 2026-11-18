@@ -1,0 +1,1 @@
+{"name":"scriptloom-desktop","version":"0.2.0-preview.3","private":true,"type":"module","scripts":{"build:web":"esbuild web/bootstrap.js --bundle --format=esm --outfile=web/desktop.bundle.js"},"dependencies":{"mygo-runtime":"0.10.0"},"devDependencies":{"esbuild":"0.25.12"}}

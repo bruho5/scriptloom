@@ -5,6 +5,12 @@
 
 A small, browser-local script desk with colored word banks, a floating notebook, and optional AI-assisted sample scenes. Write first; use AI only when you explicitly ask.
 
+## Windows desktop preview
+
+A MyGo desktop version is available as source in [desktop/](desktop/README.md), alongside the unchanged browser app. It uses native local files, Windows Credential Manager and a direct OpenAI API connection. See [desktop build and usage instructions](desktop/README.md).
+
+**No downloadable EXE or GitHub Release is published in this repository.** Download ZIP contains source, not an installed desktop app. The instructions below describe the browser version.
+
 ## Installation and usage
 
 **Requirements:** Node.js 22+ ([LTS download](https://nodejs.org/en/download)) and a modern browser. On Windows, use the official Windows Installer (.msi).
@@ -108,3 +114,4 @@ The preparation build passes 21 unit tests and TypeScript checking. The latest a
 
 ## Contributing and license
 [MIT](LICENSE), copyright bruho5. See [CONTRIBUTING.md](CONTRIBUTING.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
+
