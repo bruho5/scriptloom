@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+<title id="title">Scriptloom: notes to scene</title><desc id="desc">Original workflow schematic. Word bank, script and floating notebook stay in the browser. An explicit AI request sends selected notes and edited context to the backend and OpenAI. The result is a preview, not an edit.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#54796b" stroke-width="1.3"/></marker></defs>
+<rect width="1120" height="620" rx="24" fill="#f4f3ee"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#2f3935">
+<rect x="38" y="32" width="46" height="50" rx="12" fill="#365d51"/><text x="51" y="68" font-size="32" fill="#fffefb">S</text>
+<text x="102" y="66" font-size="32">Scriptloom.</text><text x="38" y="112" font-size="17" fill="#6d7d72">Write first. Weave scattered notes into a scene.</text>
+<rect x="38" y="146" width="1044" height="280" rx="18" fill="#fffefb" stroke="#d7ded4"/>
+<text x="62" y="176" font-size="12" letter-spacing="2" fill="#6d7d72">IN YOUR BROWSER</text>
+<rect x="60" y="196" width="208" height="202" rx="12" fill="#eff2eb"/>
+<text x="80" y="226" font-size="18">Word bank</text>
+<text x="80" y="264" font-size="14" fill="#587e73">1   BERNARDO</text><text x="80" y="296" font-size="14" fill="#76709d">2   FRANCISCO</text>
+<text x="80" y="338" font-size="12">Caps + digits → insert</text><text x="80" y="366" font-size="12">Shift / Ctrl + wheel → group</text>
+<rect x="290" y="196" width="448" height="202" rx="12" fill="#fffefb" stroke="#d7ded4"/>
+<text x="312" y="226" font-size="18">Your script</text><text x="312" y="260" font-size="14">Hamlet · Act 1, Scene 1</text>
+<text x="312" y="294" font-size="13" fill="#587e73">BERNARDO: Who's there?</text>
+<text x="312" y="322" font-size="13" fill="#76709d">FRANCISCO: Nay, answer me...</text>
+<text x="312" y="372" font-size="12" fill="#6d7d72">Autosave · annotate · undo · export</text>
+<rect x="760" y="196" width="298" height="202" rx="12" fill="#f1efe3" stroke="#ddd9c6"/>
+<text x="782" y="226" font-size="18">Floating notebook</text><text x="782" y="264" font-size="13">A thought, a conflict, an unfinished line.</text>
+<rect x="780" y="283" width="253" height="35" rx="6" fill="#dce5d6"/><text x="791" y="306" font-size="13">Select only what you want to send</text>
+<text x="782" y="367" font-size="12" fill="#6d7d72">Slides over the desk, never replaces it</text>
+<path d="M901 426V452H188V462" stroke="#54796b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="38" y="472" width="300" height="100" rx="12" fill="#e4ebe0"/><text x="58" y="503" font-size="16">Review before sending</text><text x="58" y="529" font-size="12">Selected notes + editable context</text><text x="58" y="550" font-size="12">Your key · your API billing · explicit consent</text>
+<path d="M350 521H400" stroke="#54796b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="414" y="472" width="286" height="100" rx="12" fill="#e4ebe0"/><text x="434" y="503" font-size="16">Optional AI request</text><text x="434" y="529" font-size="12">Trusted hosting backend → OpenAI</text><text x="434" y="550" font-size="12">No automatic chapter-summary call</text>
+<path d="M712 521H762" stroke="#54796b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="776" y="472" width="306" height="100" rx="12" fill="#365d51"/><text x="796" y="503" font-size="16" fill="#fffefb">Preview, not replacement</text><text x="796" y="529" font-size="12" fill="#fffefb">Summary + style notes + sample scene</text><text x="796" y="550" font-size="12" fill="#fffefb">Review · copy · download</text>
+<text x="38" y="601" font-size="11" fill="#7b827b">Workflow schematic, not an application screenshot. Uses only public-domain demo text.</text>
+</g></svg>

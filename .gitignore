@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.openai/hosting.json
+*.log
+*.tar
+*.tar.gz
+*.zip
+qa/
+.DS_Store
