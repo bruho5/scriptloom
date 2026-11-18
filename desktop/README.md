@@ -4,9 +4,15 @@
 
 A Windows x64 desktop preview built with MyGo. It reuses Scriptloom's editor, word banks, floating notebook and AI draft workflow. The browser app at the repository root remains independent.
 
-## Build
+## Download and run
 
-This directory contains **source only**. No EXE, installer or GitHub Release is published. Download the repository with **Code → Download ZIP**, extract it, and open a terminal in the `desktop` directory.
+Download the [Windows x64 portable ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip), extract it and open **Scriptloom.exe**. No Go, Node or terminal is needed at runtime. A [standalone EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe), [checksums](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt) and [release notes](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3) are also available. This unsigned preview requires Microsoft's [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). Exit the previous version before replacing program files; workspace data and saved credentials remain separate.
+
+GitHub's **Source code** archives and **Code → Download ZIP** contain source, not the runnable app.
+
+## Build from source
+
+Download the repository with **Code → Download ZIP**, extract it, and open a terminal in the `desktop` directory.
 
 Requirements: [Go 1.27.4+](https://go.dev/dl/), [Node.js 22+](https://nodejs.org/en/download) and npm. For Windows execution, install Microsoft's [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) if it is not already available.
 

@@ -9,7 +9,9 @@ A small, browser-local script desk with colored word banks, a floating notebook,
 
 A MyGo desktop version is available as source in [desktop/](desktop/README.md), alongside the unchanged browser app. It uses native local files, Windows Credential Manager and a direct OpenAI API connection. See [desktop build and usage instructions](desktop/README.md).
 
-**No downloadable EXE or GitHub Release is published in this repository.** Download ZIP contains source, not an installed desktop app. The instructions below describe the browser version.
+**Ready to run:** [Windows x64 portable ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip) · [EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe) · [release notes and requirements](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3) · [SHA256](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt). Extract the portable ZIP and open Scriptloom.exe; no Go or Node is needed. WebView2 is required. This is an unsigned preview.
+
+**Code → Download ZIP** downloads source, not the desktop executable. The instructions below describe the browser version.
 
 ## Installation and usage
 

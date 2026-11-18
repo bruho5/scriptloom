@@ -4,9 +4,15 @@
 
 使用 MyGo 构建的 Windows x64 桌面预览版，复用剧本编辑器、词库、浮动笔记和 AI 样稿流程。仓库根目录的网页版保持独立。
 
-## 构建
+## 下载与运行
 
-此目录提供**源码**，尚未发布 EXE、安装器或 GitHub Release。在仓库选择 **Code → Download ZIP**，解压后进入 `desktop` 文件夹并打开终端。
+下载 [Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip)，解压后双击 **Scriptloom.exe**，无需 Go、Node 或命令行。另提供[单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe)、[校验和](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt)及[版本说明](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3)。当前为未签名预览版，需要微软 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。更新前先退出旧版，再替换程序文件；草稿和凭据保存在其他位置，不会被覆盖。
+
+GitHub 自动生成的 **Source code** 和 **Code → Download ZIP** 下载的是源码，不是可运行成品。
+
+## 从源码构建
+
+在仓库选择 **Code → Download ZIP**，解压后进入 `desktop` 文件夹并打开终端。
 
 需要 [Go 1.27.4+](https://go.dev/dl/)、[Node.js 22+](https://nodejs.org/en/download) 和 npm。Windows 运行时需要 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)，缺失时从微软官方安装。
 

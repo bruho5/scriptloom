@@ -9,7 +9,9 @@
 
 [desktop/](desktop/README.zh-CN.md) 提供 MyGo 桌面版源码，与原网页版并存。桌面版使用本机文件、Windows 凭据管理器及 OpenAI 直连，详见[桌面版构建与使用说明](desktop/README.zh-CN.md)。
 
-**本仓库尚未发布可下载 EXE 或 GitHub Release。** Download ZIP 下载的是源码，不是已安装的桌面程序。下面的安装流程仍适用于网页版。
+**直接使用：**[Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip) · [单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe) · [版本说明与依赖](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3) · [SHA256 校验](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt)。解压便携包后双击 Scriptloom.exe，无需 Go 或 Node；需要 WebView2。当前为未签名预览版。
+
+**Code → Download ZIP** 下载的是源码，不是桌面成品。下面的安装流程仍适用于网页版。
 
 ## 安装与使用
 
