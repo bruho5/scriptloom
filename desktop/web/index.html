@@ -60,7 +60,7 @@
 <label class="field-label" for="setting-limit">默认最大输出 tokens</label><input id="setting-limit" type="number" min="256" max="4000"><button id="save-settings" class="primary" type="button">保存基础设置</button>
 <hr><h2>本机 API key</h2><p class="muted small">仅在信任的私人设备上保存。Key 由系统凭据管理器加密保管，不进入剧本备份、设置或日志。启动后需点击启用；停用只停止本应用使用，移除本机副本不会吊销 OpenAI Key。</p>
 <label class="field-label" for="setting-key">要保存的现有 API key</label><input id="setting-key" type="password" autocomplete="off" maxlength="512">
-<p class="hint">保存后由系统凭据管理器加密保管，不写入草稿或设置文件。同一 Windows 用户下的其他程序仍可能访问凭据。</p>
+<p class="hint">保存后由系统凭据管理器加密保管，不写入草稿或设置文件。Windows / Linux 同一用户下的其他程序仍可能访问凭据；macOS 使用系统钥匙串权限。</p>
 <div class="export-grid"><button id="save-key" class="outline" type="button">保存并启用 Key</button><button id="unlock-key" class="outline" type="button">启用已保存 Key</button><button id="lock-key" class="outline" type="button">停用</button><button id="forget-key" class="outline" type="button">移除本机 Key</button></div><p id="settings-status" role="status"></p></dialog>
 <script type="module" src="./desktop.bundle.js"></script>
 </body></html>

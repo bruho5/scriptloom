@@ -2,13 +2,19 @@
 
 [简体中文](README.zh-CN.md) · English
 
-A Windows x64 desktop preview built with MyGo. It reuses Scriptloom's editor, word banks, floating notebook and AI draft workflow. The browser app at the repository root remains independent.
+A desktop preview built with MyGo for Windows x64, Linux x64 and macOS Apple Silicon/Intel. It reuses Scriptloom's editor, word banks, floating notebook and AI draft workflow. The browser app at the repository root remains independent.
 
 ## Download and run
 
 Download the [Windows x64 portable ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip), extract it and open **Scriptloom.exe**. No Go, Node or terminal is needed at runtime. A [standalone EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe), [checksums](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt) and [release notes](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3) are also available. This unsigned preview requires Microsoft's [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). Exit the previous version before replacing program files; workspace data and saved credentials remain separate.
 
 GitHub's **Source code** archives and **Code → Download ZIP** contain source, not the runnable app.
+
+## Other platforms and packaging
+
+See [platform requirements and safety notes](PLATFORM-NOTES.md). macOS requires version 13+; unsigned/unnotarized bundles may be blocked by Gatekeeper. Linux requires glibc, a graphical session, GTK3 and WebKitGTK4.1; persistent keys additionally require libsecret and a Secret Service. Temporary keys remain available when the credential store fails.
+
+After `npm ci`, `python3 scripts/package.py` builds all four targets into `out/packages/`, with executable permissions, app metadata/icons and SHA256SUMS. It does not sign, notarize or upload. Requires Python 3; set `SCRIPTLOOM_GO` only when Go is not named `go`.
 
 ## Build from source
 
@@ -24,7 +30,7 @@ npm run build:web
 go test ./...
 node --test tests/key-state.test.mjs tests/storage.test.mjs
 go run github.com/tc-hib/go-winres@v0.3.3 make --arch amd64
-go build -buildvcs=false -trimpath -ldflags="-s -w -H windowsgui" -o out/Scriptloom.exe .
+go build -tags mygo_noinspector -buildvcs=false -trimpath -ldflags="-s -w -H windowsgui -X github.com/egoist/mygo.production=1" -o out/Scriptloom.exe .
 ```
 
 Alternatively, run `BUILD.ps1` from PowerShell where local script execution is permitted. Do not change system security policy just to run it; the individual commands above are equivalent. On non-Windows hosts, set `GOOS=windows GOARCH=amd64 CGO_ENABLED=0` for the final build. Cross-compilation is not runtime validation.
@@ -61,3 +67,4 @@ See [TESTING.md](TESTING.md). Windows x64 cross-build, extracted icon resources,
 - `web`: desktop-adapted frontend; root `src` is left unchanged.
 - `assets`, `winres`: vector source, multi-size icon assets and resource build configuration.
 - `licenses`: dependency notices. Application code is [MIT](LICENSE), copyright bruho5. The S glyph is outlined from Noto Serif under the included font license; it preserves the existing brand design without requiring a font installation.
+

@@ -4,6 +4,7 @@ import (
 	"context"
 	"embed"
 	"errors"
+	"fmt"
 	"io/fs"
 	"os"
 	"path/filepath"
@@ -129,7 +130,8 @@ func main() {
 	}
 	path, err := mygo.App.Path(mygo.PathUserData)
 	if err != nil {
-		return
+		fmt.Fprintln(os.Stderr, "Scriptloom: cannot open local application data directory")
+		os.Exit(1)
 	}
 	desktop := &Desktop{secrets: mygo.Secrets, storage: &store.Store{Dir: filepath.Join(path, "desktop-v1")}, client: ai.NewClient(netproxy.Transport())}
 	mygo.Bind(desktop)
@@ -172,5 +174,8 @@ func main() {
 			}()
 		})
 	})
-	_ = mygo.App.Run()
+	if err := mygo.App.Run(); err != nil {
+		fmt.Fprintln(os.Stderr, "Scriptloom startup failed:", err)
+		os.Exit(1)
+	}
 }

@@ -25,8 +25,10 @@ jobs:
       - run: go test -race ./...
       - run: go vet ./...
       - run: go run github.com/tc-hib/go-winres@v0.3.3 make --arch amd64
-      - run: go build -buildvcs=false -trimpath -ldflags="-s -w -H windowsgui" -o out/Scriptloom.exe .
-        env:
-          GOOS: windows
-          GOARCH: amd64
-          CGO_ENABLED: '0'
+      - name: Cross-build Windows, Linux and macOS
+        run: |
+          for target in windows/amd64 linux/amd64 darwin/arm64 darwin/amd64; do
+            flags='-s -w -X github.com/egoist/mygo.production=1'
+            if [ "${target%/*}" = windows ]; then flags="$flags -H windowsgui"; fi
+            GOOS=${target%/*} GOARCH=${target#*/} CGO_ENABLED=0 go build -tags mygo_noinspector -buildvcs=false -trimpath -ldflags="$flags" -o "out/${target//\//-}/Scriptloom" .
+          done

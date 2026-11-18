@@ -2,13 +2,19 @@
 
 简体中文 · [English](README.md)
 
-使用 MyGo 构建的 Windows x64 桌面预览版，复用剧本编辑器、词库、浮动笔记和 AI 样稿流程。仓库根目录的网页版保持独立。
+使用 MyGo 构建的 Windows x64、Linux x64 及 macOS Apple Silicon/Intel 桌面预览版，复用剧本编辑器、词库、浮动笔记和 AI 样稿流程。仓库根目录的网页版保持独立。
 
 ## 下载与运行
 
 下载 [Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip)，解压后双击 **Scriptloom.exe**，无需 Go、Node 或命令行。另提供[单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe)、[校验和](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt)及[版本说明](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3)。当前为未签名预览版，需要微软 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。更新前先退出旧版，再替换程序文件；草稿和凭据保存在其他位置，不会被覆盖。
 
 GitHub 自动生成的 **Source code** 和 **Code → Download ZIP** 下载的是源码，不是可运行成品。
+
+## 其他平台与打包
+
+见[各平台依赖与安全说明](PLATFORM-NOTES.md)。macOS 最低 13，未签名/未公证的应用可能被 Gatekeeper 阻止；Linux 需要 glibc 图形桌面、GTK3、WebKitGTK4.1，保存密钥另需 libsecret 和 Secret Service。凭据库不可用时仍可使用临时 Key，不降级为明文存储。
+
+执行 `npm ci` 后，运行 `python3 scripts/package.py` 构建全部四种目标，产物放在 `out/packages/`，包含可执行权限、应用元数据/图标和 SHA256SUMS。脚本不会签名、公证或上传。打包工具需要 Python 3；Go 命令名不是 `go` 时设置 `SCRIPTLOOM_GO`。
 
 ## 从源码构建
 
@@ -24,7 +30,7 @@ npm run build:web
 go test ./...
 node --test tests/key-state.test.mjs tests/storage.test.mjs
 go run github.com/tc-hib/go-winres@v0.3.3 make --arch amd64
-go build -buildvcs=false -trimpath -ldflags="-s -w -H windowsgui" -o out/Scriptloom.exe .
+go build -tags mygo_noinspector -buildvcs=false -trimpath -ldflags="-s -w -H windowsgui -X github.com/egoist/mygo.production=1" -o out/Scriptloom.exe .
 ```
 
 也可在允许本地脚本执行的 PowerShell 中运行 `BUILD.ps1`；无需为此修改系统安全策略，直接执行上面的命令即可。其他系统交叉构建时，仅为最后的构建命令设置 `GOOS=windows GOARCH=amd64 CGO_ENABLED=0`。交叉编译不等于运行验证。
@@ -61,3 +67,4 @@ AI 从 Go 直接请求 `https://api.openai.com/v1/responses`，无需 Sites 网�
 - `web`：桌面适配界面；根目录 `src` 不变。
 - `assets`、`winres`：矢量源、多尺寸图标及资源配置。
 - `licenses`：依赖许可。应用采用 [MIT](LICENSE)，署名 bruho5。S 字形由 Noto Serif 转为轮廓，附字体许可，不要求用户安装字体。
+
