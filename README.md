@@ -5,6 +5,60 @@
 
 A small, browser-local script desk with colored word banks, a floating notebook, and optional AI-assisted sample scenes. Write first; use AI only when you explicitly ask.
 
+## New to GitHub? Download and run on Windows (no Git needed)
+
+**This is a source-code project, not an .exe installer or a public online demo.** Download a ZIP, install Node.js once, and run one command to open the editor on your own computer. **Local writing works; automatic AI generation is not connected in this local preview.**
+
+### 1. Download and extract
+1. Open the [Scriptloom repository home](https://github.com/bruho5/scriptloom), not an individual file page.
+2. Above the file list, click the green **Code** button → **Download ZIP**. No Git installation or GitHub sign-in is required.
+3. In Windows File Explorer, right-click the downloaded **scriptloom-main.zip** → **Extract All**.
+4. Extract it wherever you prefer, for example **E:\Projects**. Open **scriptloom-main** and find **package.json**, **src**, and **scripts** together.
+   - If you only see another folder, open that folder.
+   - Do not run from inside the ZIP or double-click src/index.html; use the local server below.
+
+### 2. Install Node.js once
+1. Visit the [official Node.js download page](https://nodejs.org/en/download). Choose Windows and an **LTS** version (22 or newer), then download and install the **Windows Installer (.msi)** matching your computer.
+2. Close any existing command windows after installation and open a new one. Ordinary writing does not require Git, Python, Visual Studio, or an API key.
+
+### 3. Start from the project folder
+1. In File Explorer, open the folder containing **package.json** from step 1.
+2. Click its address bar, type **cmd**, and press Enter. This opens Command Prompt in the correct folder.
+3. Check your Node.js version:
+
+~~~bat
+node --version
+~~~
+
+It should show v22 or newer. Then run:
+
+~~~bat
+node scripts/serve.mjs
+~~~
+
+When you see **Local: http://127.0.0.1:4173/**, **keep the command window open** and open this address in Edge, Chrome, or another browser:
+
+**http://127.0.0.1:4173/**
+
+This is your own computer, not a public website. **No npm ci or build step is needed for ordinary local writing**: the preview server uses only Node.js built-in modules. npm steps below are for development checks.
+
+### 4. Write, save, and return
+- The first visit opens a Hamlet excerpt. Click the script to edit it; the right-edge notebook handle opens your notes.
+- For a blank draft, open **Import / Export** and choose the new-blank-draft action. Confirm after reviewing the backup notice.
+- Autosave uses **this browser's local storage**, not files inside the downloaded folder. It does not sync across browsers or computers. Do not rely on a private/incognito session for long-term storage.
+- Regularly export **Full workspace .json** from **Import / Export**, especially before clearing browser data.
+- Press **Ctrl + C** in Command Prompt to stop the server. Next time, start it again and open the same address in the same browser to recover its locally saved workspace.
+
+### Why does the AI button not work locally?
+The ZIP's static preview has **no /api/draft backend**. Entering an API key does not enable automatic AI generation here; you do not need to buy API access just to try writing. **Prepare text · Copy / export** still works locally; you decide whether to paste that material into another AI tool. Automatic generation requires a separately deployed, authenticated backend: see [deployment notes](docs/DEPLOYMENT.md).
+
+### Troubleshooting
+- **“node is not recognized”**: finish installing Node.js, then close and reopen Command Prompt.
+- **“Cannot find module ...serve.mjs”**: reopen Command Prompt from the folder containing package.json and scripts.
+- **“EADDRINUSE”**: port 4173 is occupied. If Scriptloom is already running, try opening its address rather than starting it twice. Otherwise stop the server you previously started; do not terminate unfamiliar processes.
+- **Page will not open**: keep the server running and paste the full http address into the browser address bar, not a search box.
+- **Draft missing in another browser**: export JSON from the original browser and import it into the new one; do not clear the original browser data.
+
 ![Scriptloom workflow diagram, not a screenshot](docs/images/workflow.svg)
 
 ## What it does
@@ -18,7 +72,7 @@ A small, browser-local script desk with colored word banks, a floating notebook,
 
 This is an early prototype, not a collaborative editor, production credential manager, or automatic full-script summarizer. No cloud document sync or universal AI-provider integration is included.
 
-## Try the editor locally
+## Developer setup and checks
 Use Node.js 22 or newer and npm:
 
 ~~~sh
