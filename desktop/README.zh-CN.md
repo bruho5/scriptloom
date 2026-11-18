@@ -6,9 +6,14 @@
 
 ## 下载与运行
 
-下载 [Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip)，解压后双击 **Scriptloom.exe**，无需 Go、Node 或命令行。另提供[单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe)、[校验和](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt)及[版本说明](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3)。当前为未签名预览版，需要微软 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。更新前先退出旧版，再替换程序文件；草稿和凭据保存在其他位置，不会被覆盖。
+下载 [Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-windows-x64.zip)，解压后双击 **Scriptloom.exe**，无需 Go、Node 或命令行。另提供[单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom.exe)、[校验和](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/SHA256SUMS.txt)及[版本说明](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.4)。当前为未签名预览版，需要微软 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。更新前先退出旧版，再替换程序文件；草稿和凭据保存在其他位置，不会被覆盖。
 
 GitHub 自动生成的 **Source code** 和 **Code → Download ZIP** 下载的是源码，不是可运行成品。
+
+
+**其他系统实验包：**[macOS Apple Silicon（13+）](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-macos-arm64.zip) · [macOS Intel（13+）](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-macos-x64.zip) · [Linux x64](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-linux-x64.tar.gz)。
+
+macOS 未经 Developer ID 签名或公证，可能被 Gatekeeper 阻止。Linux 需要 glibc 图形桌面、GTK3、WebKitGTK4.1，保存密钥另需 Secret Service。已完成编译与包结构检查，**未完成原生图形实机验收**。下载前请读[平台说明](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/PLATFORM-NOTES.md)。
 
 ## 其他平台与打包
 

@@ -5,13 +5,18 @@
 
 一个轻量的浏览器本地剧本工作台：彩色词库、浮动笔记，以及可选的 AI 样稿辅助。先创作，需要时再主动调用 AI。
 
-## Windows 桌面预览版
+## 桌面预览版
 
 [desktop/](desktop/README.zh-CN.md) 提供 MyGo 桌面版源码，与原网页版并存。桌面版使用本机文件、Windows 凭据管理器及 OpenAI 直连，详见[桌面版构建与使用说明](desktop/README.zh-CN.md)。
 
-**直接使用：**[Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip) · [单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe) · [版本说明与依赖](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3) · [SHA256 校验](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt)。解压便携包后双击 Scriptloom.exe，无需 Go 或 Node；需要 WebView2。当前为未签名预览版。
+**直接使用：**[Windows x64 便携 ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-windows-x64.zip) · [单独 EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom.exe) · [版本说明与依赖](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.4) · [SHA256 校验](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/SHA256SUMS.txt)。解压便携包后双击 Scriptloom.exe，无需 Go 或 Node；需要 WebView2。当前为未签名预览版。
 
 **Code → Download ZIP** 下载的是源码，不是桌面成品。下面的安装流程仍适用于网页版。
+
+
+**其他系统实验包：**[macOS Apple Silicon（13+）](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-macos-arm64.zip) · [macOS Intel（13+）](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-macos-x64.zip) · [Linux x64](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-linux-x64.tar.gz)。
+
+macOS 未经 Developer ID 签名或公证，可能被 Gatekeeper 阻止。Linux 需要 glibc 图形桌面、GTK3、WebKitGTK4.1，保存密钥另需 Secret Service。已完成编译与包结构检查，**未完成原生图形实机验收**。下载前请读[平台说明](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/PLATFORM-NOTES.md)。
 
 ## 安装与使用
 

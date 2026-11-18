@@ -5,13 +5,18 @@
 
 A small, browser-local script desk with colored word banks, a floating notebook, and optional AI-assisted sample scenes. Write first; use AI only when you explicitly ask.
 
-## Windows desktop preview
+## Desktop previews
 
 A MyGo desktop version is available as source in [desktop/](desktop/README.md), alongside the unchanged browser app. It uses native local files, Windows Credential Manager and a direct OpenAI API connection. See [desktop build and usage instructions](desktop/README.md).
 
-**Ready to run:** [Windows x64 portable ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom-0.2.0-preview.3-windows-x64.zip) · [EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/Scriptloom.exe) · [release notes and requirements](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.3) · [SHA256](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.3/SHA256SUMS.txt). Extract the portable ZIP and open Scriptloom.exe; no Go or Node is needed. WebView2 is required. This is an unsigned preview.
+**Ready to run:** [Windows x64 portable ZIP](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-windows-x64.zip) · [EXE](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom.exe) · [release notes and requirements](https://github.com/bruho5/scriptloom/releases/tag/v0.2.0-preview.4) · [SHA256](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/SHA256SUMS.txt). Extract the portable ZIP and open Scriptloom.exe; no Go or Node is needed. WebView2 is required. This is an unsigned preview.
 
 **Code → Download ZIP** downloads source, not the desktop executable. The instructions below describe the browser version.
+
+
+**Other experimental builds:** [macOS Apple Silicon (13+)](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-macos-arm64.zip) · [macOS Intel (13+)](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-macos-x64.zip) · [Linux x64](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/Scriptloom-0.2.0-preview.4-linux-x64.tar.gz).
+
+macOS bundles have no Developer ID signature or notarization and may be blocked by Gatekeeper. Linux requires a glibc graphical desktop, GTK3 and WebKitGTK4.1; persistent keys need Secret Service. These builds passed compilation/package checks, **not native GUI acceptance tests**. Read [platform notes](https://github.com/bruho5/scriptloom/releases/download/v0.2.0-preview.4/PLATFORM-NOTES.md) before downloading.
 
 ## Installation and usage
 
